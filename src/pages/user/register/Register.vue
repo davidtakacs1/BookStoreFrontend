@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer.vue';
 
 </script>
 
-<template src="./sign-in.html"></template>
-<style scoped src="./sign-in.css"></style>
+<template src="./register.html"></template>
+<style scoped src="./register.css"></style>
 
 <script>
 export default {
