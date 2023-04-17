@@ -9,7 +9,7 @@
     "test": "nightwatch --env chrome --headless"
   },
   "dependencies": {
-    "pinia": "2.0.24",
+    "pinia": "^2.0.24",
     "vue": "3.2.45",
     "vue-router": "4.1.6"
   },
@@ -17,8 +17,8 @@
     "@vitejs/plugin-vue": "3.2.0",
     "chromedriver": "107.0.3",
     "geckodriver": "3.2.0",
-    "vite": "3.2.4",
     "nightwatch": "2.5.1",
+    "vite": "3.2.4",
     "vite-plugin-nightwatch": "0.3.2"
   }
 }
