@@ -7,5 +7,15 @@ import Footer from '../../components/Footer.vue';
 <style scoped src="./books.css"></style>
 
 <script>
+export default {
+  components: {
+    TopNavbar,
+    Footer
+  },
 
+  data() {
+    return {
+    };
+  }
+};
 </script>
