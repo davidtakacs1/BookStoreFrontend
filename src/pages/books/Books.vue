@@ -1,12 +1,10 @@
 <script setup>
 import TopNavbar from '../../components/TopNavbar.vue';
 import Footer from '../../components/Footer.vue';
-import {useCart} from '/src/store/cart.js'
-const store = useCart()
 </script>
 
-<template src="./cart.html"></template>
-<style scoped src="./cart.css"></style>
+<template src="./books.html"></template>
+<style scoped src="./books.css"></style>
 
 <script>
 import { mapState, mapActions } from 'pinia'
