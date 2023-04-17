@@ -2,6 +2,7 @@ import {createRouter} from 'vue-router'
 import Homepage from './home/Home.vue';
 import {RegisterComponent, SignInComponent} from './user';
 import Cart from './cart/Cart.vue';
+import Books from './books/Books.vue';
 
 const routes = [
   {
@@ -23,6 +24,11 @@ const routes = [
     path: '/cart/',
     component: Cart
   },
+
+  {
+    path: '/books/',
+    component: Books
+  }
 ]
 
 export default function (history) {
