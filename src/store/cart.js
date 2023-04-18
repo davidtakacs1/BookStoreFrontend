@@ -45,6 +45,10 @@ export const useCart = defineStore('cart-store', {
     addToCart(book) {
       this.cart = this.cart.slice(0);
       this.cart.push(book);
+    },
+    removeFromCart(book) {
+      this.cart = this.cart.slice(0);
+      this.cart.splice(this.cart.indexOf(book),1);
     }
   }
 })
