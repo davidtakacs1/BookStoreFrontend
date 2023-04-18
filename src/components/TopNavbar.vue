@@ -1,5 +1,5 @@
 <script setup>
-import {useCart} from '/src/store/cart.js'
+import {useCart} from '/src/stores/cart.js'
 const cart = useCart()
 </script>
 <template>

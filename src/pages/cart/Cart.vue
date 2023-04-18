@@ -1,7 +1,7 @@
 <script setup>
 import TopNavbar from '../../components/TopNavbar.vue';
 import Footer from '../../components/Footer.vue';
-import {useCart} from '/src/store/cart.js'
+import {useCart} from '/src/stores/cart.js'
 const store = useCart()
 </script>
 
