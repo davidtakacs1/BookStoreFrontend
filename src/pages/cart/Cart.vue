@@ -6,7 +6,7 @@ const store = useCart()
 </script>
 
 <template src="./cart.html"></template>
-<style scoped src="./cart.css"></style>
+<style scoped src="../../assets/css/books.css"></style>
 
 <script>
 import { mapState, mapActions } from 'pinia'

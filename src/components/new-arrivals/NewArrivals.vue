@@ -1,12 +1,12 @@
 <script setup>
-import {useCatalog} from '/src/store/catalog.js'
-import {useCart} from '/src/store/cart.js'
+import {useCatalog} from '/src/stores/catalog.js'
+import {useCart} from '/src/stores/cart.js'
 const store = useCatalog()
 const cart = useCart()
 </script>
 
 <template src="./new-arrivals.html"></template>
-<style scoped src="./new-arrivals.css"></style>
+<style scoped src="../../assets/css/new-arrivals.css"></style>
 
 <script>
 import { mapState, mapActions } from 'pinia'

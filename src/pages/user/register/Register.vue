@@ -5,7 +5,7 @@ import Footer from '../../../components/Footer.vue';
 </script>
 
 <template src="./register.html"></template>
-<style scoped src="./register.css"></style>
+<style scoped src="../../../assets/css/register.css"></style>
 
 <script>
 export default {

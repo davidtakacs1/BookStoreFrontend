@@ -4,7 +4,7 @@ import Footer from '../../components/Footer.vue';
 </script>
 
 <template src="./books.html"></template>
-<style scoped src="./books.css"></style>
+<style scoped src="../../assets/css/books.css"></style>
 
 <script>
 export default {
