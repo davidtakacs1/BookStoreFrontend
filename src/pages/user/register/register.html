@@ -2,47 +2,76 @@
   <TopNavbar />
 
   <main class="form-signin">
-    <form>
-      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
-
-      <div class="form-floating">
-        <input type="text" class="form-control" id="floatingFName" placeholder="Teszt">
-        <label for="floatingFName">First Name</label>
+    <form action="">
+      <div> <!--1 column of 3-->
+        <h1 class="h3 mb-3 fw-normal">Basic information</h1>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingFName" placeholder="Teszt">
+          <label for="floatingFName">First Name</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingLName" placeholder="Elek">
+          <label for="floatingLName">Last Name</label>
+        </div>
+        <div class="form-floating">
+          <input type="email" class="form-control" id="floatingMail" placeholder="name@example.com">
+          <label for="floatingMail">Email address</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+          <label for="floatingPassword">Password</label>
+        </div>
       </div>
-      <div class="form-floating">
-        <input type="text" class="form-control" id="floatingLName" placeholder="Elek">
-        <label for="floatingLName">Last Name</label>
+      <div><!--2 column of 3 -->
+        <h1 class="h3 mb-3 fw-normal">Shipping Address</h1>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingCountry" placeholder="Password">
+          <label for="floatingCountry">Country</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingCity" placeholder="Password">
+          <label for="floatingCity">City</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingStreet" placeholder="Password">
+          <label for="floatingStreet">Street</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingZIP" placeholder="Password">
+          <label for="floatingZIP">ZIP code</label>
+        </div>
       </div>
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingMail" placeholder="name@example.com">
-        <label for="floatingMail">Email address</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingCountry" placeholder="Password">
-        <label for="floatingCountry">Country</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingCity" placeholder="Password">
-        <label for="floatingCity">City</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingStreet" placeholder="Password">
-        <label for="floatingStreet">Street</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingZIP" placeholder="Password">
-        <label for="floatingZIP">ZIP code</label>
+      
+      <div> <!--3 column of 3, should only show WHEN BILLING IS TRUE -->
+        <h1 class="h3 mb-3 fw-normal">Billing Address</h1>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingCountry" placeholder="Password">
+          <label for="floatingCountry">Country</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingCity" placeholder="Password">
+          <label for="floatingCity">City</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingStreet" placeholder="Password">
+          <label for="floatingStreet">Street</label>
+        </div>
+        <div class="form-floating">
+          <input type="password" class="form-control" id="floatingZIP" placeholder="Password">
+          <label for="floatingZIP">ZIP code</label>
+        </div>
       </div>
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" :value="billing"> Billing Address is different than shipping address
+        </label>
+      </div>
+      <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
       <p class="mt-5 mb-3 text-muted"></p>
     </form>
   </main>
