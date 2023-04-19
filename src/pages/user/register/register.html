@@ -42,7 +42,7 @@
         </div>
       </div>
       
-      <div> <!--3 column of 3, should only show WHEN BILLING IS TRUE -->
+      <div v-if="billing"> <!--3 column of 3, should only show WHEN BILLING IS TRUE -->
         <h1 class="h3 mb-3 fw-normal">Billing Address</h1>
         <div class="form-floating">
           <input type="password" class="form-control" id="floatingCountry" placeholder="Password">
@@ -68,7 +68,7 @@
       </div>
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" :value="billing"> Billing Address is different than shipping address
+          <input type="checkbox" v-model="billing"> Billing Address is different than shipping address
         </label>
       </div>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
@@ -76,5 +76,5 @@
     </form>
   </main>
 
-  <Footer />
+  <Footer/>
 </div>
