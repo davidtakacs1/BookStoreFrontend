@@ -19,7 +19,7 @@ const cart = useCart()
         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
           <li><router-link class="dropdown-item" to="/sign-in/">Sign-in</router-link></li>
           <li><hr class="dropdown-divider"></li>
-          <li><a class="dropdown-item" href="/register/">Register</a></li>
+          <li><a class="dropdown-item" href="/register">Register</a></li>
         </ul>
       </div>
       <div class="shopping-cart">
