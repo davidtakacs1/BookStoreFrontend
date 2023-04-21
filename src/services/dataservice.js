@@ -2,6 +2,9 @@ import Axios from 'axios';
 Axios.defaults.baseURL = 'https://shopking.cyclic.app';
 
 export default {
+    getProducts(){
+        return Axios.get(`/products`);
+    },
     getProductById(productId){
         return Axios.get(`/products/${productId}`);
     },
