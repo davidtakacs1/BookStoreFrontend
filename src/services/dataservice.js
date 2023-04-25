@@ -1,5 +1,5 @@
 import Axios from 'axios';
-Axios.defaults.withCredentials=true;
+// Axios.defaults.withCredentials=true;
 Axios.defaults.baseURL = 'https://shopking.cyclic.app';
 
 export default {
