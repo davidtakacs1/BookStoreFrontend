@@ -1,7 +1,7 @@
 <script setup>
 import TopNavbar from '../../components/TopNavbar.vue';
 import Footer from '../../components/Footer.vue';
-// import dataservice from '../../services/dataservice';
+import dataservice from '../../services/dataservice';
 import { ref } from 'vue';
 
 const products = ref([])
@@ -14,6 +14,7 @@ dataservice.getProducts()
     .catch((err) => {
         console.log(err);
     });
+    
 </script>
 
 <template>
