@@ -3,23 +3,23 @@ import {useCart} from '/src/stores/cart.js'
 const cart = useCart()
 </script>
 <template>
-    <nav class="py-2 fixed-top">
+  <nav class="py-2 fixed-top">
     <div class="container d-flex flex-wrap">
       <ul class="nav me-auto">
         <li class="nav-item"><router-link to="/" class="nav-link px-2 active" aria-current="page">Home</router-link></li>
-        <li class="nav-item"><router-link to="/books" class="nav-link px-2">Books</router-link></li>
-        <li class="nav-item"><router-link to="#" class="nav-link px-2">Pricing</router-link></li>
-        <li class="nav-item"><router-link to="#" class="nav-link px-2">FAQs</router-link></li>
-        <li class="nav-item"><router-link to="#" class="nav-link px-2">About</router-link></li>
+        <li class="nav-item"><a href="/books" class="nav-link px-2">Books</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link px-2">About</a></li>
       </ul>
       <div class="flex-shrink-0 dropdown">
-        <router-link to="#" class="d-block text-decoration-none" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top:5px">
+        <a href="#" class="d-block text-decoration-none" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top:5px">
           <img src="/images-cloud/user_account_profile_icon.svg" alt="profile" width="24" height="24" class="rounded-circle">
-        </router-link>
+        </a>
         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
           <li><router-link class="dropdown-item" to="/sign-in/">Sign-in</router-link></li>
           <li><hr class="dropdown-divider"></li>
-          <li><router-link class="dropdown-item" to="/register">Register</router-link></li>
+          <li><a class="dropdown-item" href="/register">Register</a></li>
         </ul>
       </div>
       <div class="shopping-cart">

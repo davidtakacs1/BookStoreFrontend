@@ -35,8 +35,8 @@ const store = useCart()
             </li>
 
             <li class="list-group-item d-flex justify-content-between">
-              <span>Total ()</span>
-              <strong>{{total}}</strong>
+              <span>Total ({{currency.name}})</span>
+              <strong>{{currency.symbol}}{{total}}</strong>
             </li>
           </ul>
           

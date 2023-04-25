@@ -1,5 +1,4 @@
 import Axios from 'axios';
-// Axios.defaults.withCredentials=true;
 Axios.defaults.baseURL = 'https://shopking.cyclic.app';
 
 export default {
@@ -35,10 +34,7 @@ export default {
         return Axios.post('/auth/register',{user});
     },
     login(user){
-        return Axios.post('/auth/login',{
-            email:user.email,
-            password:user.password
-        });
+        return Axios.post('/auth/login',{user});
     },
     logout(){
         return Axios.post('/auth/logout');
