@@ -14,7 +14,6 @@ dataservice.getProducts()
     .catch((err) => {
         console.log(err);
     });
-
 </script>
 
 <template>
