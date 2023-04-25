@@ -1,15 +1,15 @@
 <script setup>
-// import TopNavbar from '../../components/TopNavbar.vue';
-// import Footer from '../../components/Footer.vue';
-// import dataservice from '../../services/dataservice'
-// import { ref } from 'vue'
+import TopNavbar from '../../components/TopNavbar.vue';
+import Footer from '../../components/Footer.vue';
+import dataservice from '../../services/dataservice'
+import { ref } from 'vue'
 
 const products = ref([])
 
 dataservice.getProducts()
     .then((resp) => {
         products.value = resp.data;
-        //console.log(gyartok.value);
+        console.log(gyartok.value);
     })
     .catch((err) => {
         console.log(err);
@@ -35,7 +35,6 @@ dataservice.getProducts()
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col" v-for="product in products" :key="index">
       <div class="card h-100 product">
-        <img src="..." class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title text-white">{{ product.name }}</h5>
           <p class="card-text text-white">{{ product.author }}</p>
