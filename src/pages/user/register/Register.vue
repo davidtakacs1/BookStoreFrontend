@@ -37,11 +37,11 @@ const newuser=ref({
     <form action="">
       <div> <!--1 column of 3-->
         <h1 class="h3 mb-3 fw-normal">Basic information</h1>
-        <div class="form mb-2">
+        <div class="form-floating mb-2">
           <input type="text" class="form-control" id="floatingFName" placeholder="Teszt" v-model="newuser.firstName">
           <label for="floatingFName">First Name</label>
         </div>
-        <div class="form mb-2">
+        <div class="form-floating mb-2">
           <input type="text" class="form-control" id="floatingLName" placeholder="Elek" v-model="newuser.lastName">
           <label for="floatingLName">Last Name</label>
         </div>
@@ -120,7 +120,7 @@ body {
   padding-bottom: 40px;
 }
 
-label {
+.label {
   text-decoration: white;
 }
 

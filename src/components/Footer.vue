@@ -19,7 +19,7 @@
 
 <style scoped>
 footer {
-  min-height: 300px;
+  min-height: 310px;
   text-align: center;
   background-color: #111222;
   padding-top: 120px;

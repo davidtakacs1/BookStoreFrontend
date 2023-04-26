@@ -35,7 +35,7 @@ const store = useCart()
             </li>
 
             <li class="list-group-item d-flex justify-content-between">
-              <span>Total ()</span>
+              <span>Total:</span>
               <strong>{{total}}</strong>
             </li>
           </ul>
@@ -143,7 +143,7 @@ const store = useCart()
 
   <div class="parallax__layer parallax__layer--2"></div>
 
-  <div class="parallax__layer parallax__layer--2"><div id="clouds" class="top-clouds">&nbsp;</div></div>
+  <div class="parallax__layer parallax__layer--2"><div id="clouds" class="-clouds">&nbsp;</div></div>
 
   <div class="parallax__layer parallax__layer--2" style="z-index: 1000"></div>
 
@@ -152,3 +152,35 @@ const store = useCart()
 
   </div>
 </template>
+
+<style scoped>
+.container {
+  max-width: 960px;
+  background: #111222;
+  position: sticky;
+  color: #ccc;
+  z-index: 2000;
+  padding-bottom: 50px;
+}
+
+h4, h4 .text-primary {
+  color: #e6ee9c !important;
+}
+
+.form-control {
+  font-size: 1rem;
+  background-color: rgba(0,0,0,.2);
+  color: #ccc;
+  border: 1px solid #656;
+}
+
+.input-group-text {
+  background-color: rgba(0,0,0,.5);
+  color: #ccc;
+  border-color: #656;
+}
+
+.list-group-item {
+  background-color: #eee;
+}
+</style>
