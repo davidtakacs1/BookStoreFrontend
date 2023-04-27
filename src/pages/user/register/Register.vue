@@ -73,31 +73,6 @@ const newuser=ref({
           <label for="floatingZIP">ZIP code</label>
         </div>
       </div>
-      
-      <div v-if="billing"> <!--3 column of 3, should only show WHEN BILLING IS TRUE -->
-        <h1 class="h3 mb-3 fw-normal">Billing Address</h1>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingCountry" placeholder="Password" v-model="newuser.address.country">
-          <label for="floatingCountry">Country</label>
-        </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingCity" placeholder="Password" v-model="newuser.address.city">
-          <label for="floatingCity">City</label>
-        </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingStreet" placeholder="Password" v-model="newuser.address.street">
-          <label for="floatingStreet">Street</label>
-        </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="floatingZIP" placeholder="Password" v-model="newuser.address.zip">
-          <label for="floatingZIP">ZIP code</label>
-        </div>
-      </div>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" v-model="billing"> Billing Address is different than shipping address
-        </label>
-      </div>
       <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
       <p class="mt-5 mb-3 text-muted"></p>
     </form>
