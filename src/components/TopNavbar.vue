@@ -15,12 +15,12 @@ const cart = useCart()
       <div class="flex-shrink-0 dropdown">
         <router-link to="#" class="d-block text-decoration-none" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false" style="margin-top:5px">
           <img src="/images-cloud/user_account_profile_icon.svg" alt="profile" width="24" height="24" class="rounded-circle">
+          <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
+            <li><router-link class="dropdown-item" to="/sign-in">Sign-in</router-link></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><router-link class="dropdown-item" to="/register">Register</router-link></li>
+          </ul>
         </router-link>
-        <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="">
-          <li><router-link class="dropdown-item" to="/sign-in/">Sign-in</router-link></li>
-          <li><hr class="dropdown-divider"></li>
-          <li><router-link class="dropdown-item" to="/register">Register</router-link></li>
-        </ul>
       </div>
       <div class="shopping-cart">
         <router-link to="/cart/" class="d-block text-decoration-none" id="dropdownUser2" aria-expanded="false" style="margin-top:4px">
@@ -31,6 +31,7 @@ const cart = useCart()
     </div>
   </nav>
 </template>
+
 
 <style scoped>
   #dropdownUser2 {
