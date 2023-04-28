@@ -7,11 +7,8 @@ dataservice.getRandomBooks(4).then((resp)=>{
   FeaturedBooks.value=resp.data;
   FeaturedBooks.value.forEach(book => {
     if(!book.hasOwnProperty('imgUrl')){
-      book.imgUrl="../../../public/img/no image for book.png";
-    }else{
-      book.imgUrl="../../../"+book.imgUrl;
+      book.imgUrl="/img/no image for book.png";
     }
-  console.log(FeaturedBooks.value);
   });
 });
 </script>

@@ -7,9 +7,13 @@ import { ref } from 'vue'
 const products = ref([])
 
 dataservice.getProducts()
-    .then((resp) => {
-        products.value = resp.data;
-        console.log(gyartok.value);
+  .then((resp) => {
+      products.value = resp.data;
+      products.value.forEach(book => {
+        if(!book.hasOwnProperty('imgUrl')){
+        book.imgUrl="/img/no image for book.png";
+        }
+  });
     })
     .catch((err) => {
         console.log(err);
@@ -37,6 +41,7 @@ dataservice.getProducts()
           <div class="row row-cols-1 row-cols-md-3 g-3">
             <div class="col" v-for="product in products" :key="index">
               <div class="card h-100 product" >
+                <img class="card-img-top" :src="product.imgUrl" style="height:250px;"/>
                 <div class="card-body">
                   <div class="container">
                     <h5 class="card-title text-white">{{ product.name }}</h5>
