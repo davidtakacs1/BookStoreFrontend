@@ -42,5 +42,8 @@ export default {
     },
     logout(){
         return Axios.post('/auth/logout');
+    },
+    getRandomBooks(amount){
+        return Axios.get('/products/random/'+amount);
     }
 }
