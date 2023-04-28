@@ -1,6 +1,11 @@
 <script setup>
 import dataservice from '../../services/dataservice';
+import {useCart} from '../../stores/cart';
+import { storeToRefs } from 'pinia';
 import { ref } from 'vue';
+
+const shoppingCart=useCart();
+console.log(shoppingCart.cart)
 
 const FeaturedBooks=ref([]);
 dataservice.getRandomBooks(4).then((resp)=>{
@@ -11,6 +16,7 @@ dataservice.getRandomBooks(4).then((resp)=>{
     }
   });
 });
+
 </script>
 
 <template>
@@ -31,7 +37,7 @@ dataservice.getRandomBooks(4).then((resp)=>{
                    :style="{ '--currency': bookDetail.currency }"
                    :value="bookDetail.price"
                    class="form-control"  readonly aria-label=""></span>
-            <button @click="addToCart(bookDetail)" class="btn btn-outline-secondary add-to-cart" type="button"><img src="/images-cloud/basket_icon.svg" alt="Add to basket"></button>
+            <button @click="shoppingCart.addToCart(bookDetail)" class="btn btn-outline-secondary add-to-cart" type="button"><img src="/images-cloud/basket_icon.svg" alt="Add to basket"></button>
           </div>
 
         </div>

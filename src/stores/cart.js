@@ -43,8 +43,14 @@ export const useCart = defineStore('cart-store', {
 
   actions: {
     addToCart(book) {
-      this.cart = this.cart.slice(0);
-      this.cart.push(book);
+      this.cart.forEach(item=>{
+        if(item.id==book.id){
+          item.quantity++
+          return;
+        }
+      })
+      this.cart.push({id:book.id,price:book.price,quantity:1})
+      console.log(this.cart)
     },
     removeFromCart(book) {
       this.cart = this.cart.slice(0);
