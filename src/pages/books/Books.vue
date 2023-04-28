@@ -11,10 +11,8 @@ dataservice.getProducts()
       products.value = resp.data;
       products.value.forEach(book => {
         if(!book.hasOwnProperty('imgUrl')){
-          book.imgUrl="../../../public/img/no image for book.png";
-        }else{
-        book.imgUrl="../../../"+book.imgUrl;
-  }
+          book.imgUrl="/img/no image for book.png";
+        }
   });
     })
     .catch((err) => {
