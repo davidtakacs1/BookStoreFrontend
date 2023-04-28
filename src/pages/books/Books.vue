@@ -11,8 +11,10 @@ dataservice.getProducts()
       products.value = resp.data;
       products.value.forEach(book => {
         if(!book.hasOwnProperty('imgUrl')){
-        book.imgUrl="/img/no image for book.png";
-        }
+          book.imgUrl="../../../public/img/no image for book.png";
+        }else{
+        book.imgUrl="../../../"+book.imgUrl;
+  }
   });
     })
     .catch((err) => {
@@ -41,17 +43,20 @@ dataservice.getProducts()
           <div class="row row-cols-1 row-cols-md-3 g-3">
             <div class="col" v-for="product in products" :key="index">
               <div class="card h-100 product" >
-                <img class="card-img-top" :src="product.imgUrl" style="height:250px;"/>
-                <div class="card-body">
-                  <div class="container">
-                    <h5 class="card-title text-white">{{ product.name }}</h5>
-                    <br>
-                    <p class="card-text text-white">{{ product.author }}</p>
-                    <p class="card-text text-white">Price: {{ product.price }}Ft</p>
-                    <p class="card-text text-white">On stock: {{ product.quantity }}</p>
-                    <button class="btn-primary text-white">Order</button>
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img :src="product.imgUrl" class="img-fluid rounded-start" :alt="product.name">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title text-white" text-white>{{ product.name }}</h5>
+                      <p class="card-text text-white">{{product.author}}</p>
+		                  <p class="card-text text-white">Price: {{product.price}}</p>
+		                  <p class="card-text text-white">On stock: {{product.quantity}}</p>
+		                  <button class="btn-primary text-white">Order</button>
+                    </div>
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>  
