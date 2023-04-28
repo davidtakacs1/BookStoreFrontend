@@ -53,7 +53,8 @@ dataservice.getProducts()
                       <p class="card-text text-white">{{product.author}}</p>
 		                  <p class="card-text text-white">Price: {{product.price}}</p>
 		                  <p class="card-text text-white">On stock: {{product.quantity}}</p>
-		                  <button class="btn-primary text-white">Order</button>
+		                  <button class="btn-primary text-white" v-if="product.quantity>0">Order</button>
+                      <p v-else>Out of Stock</p>
                     </div>
                   </div>
                 </div>
